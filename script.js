@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector('#grid');
 let defaultGrid = 16;
 
+// Draws default/on-load grid
 drawGrid();
 
 function drawGrid(userGrid = defaultGrid) {
@@ -11,12 +12,22 @@ function drawGrid(userGrid = defaultGrid) {
   gridContainer.style.gridTemplateRows = `repeat(${userGrid}, 1fr)`;
 
   for (i = 0; i <= gridSize; i++) {
-
-    gridContainer.appendChild(document.createElement('div'));
+    let square = document.createElement('div');
+    //square.classList.add('square');
+    gridContainer.appendChild(square);
   }
 }
 
-function paintItBlack() {
-  
-}
+gridContainer.addEventListener('mouseover', getColor);
 
+function getColor(event) {
+  let square = event.target;
+  return square.style.backgroundColor = 'black';
+  // Multi-color test
+  /*
+  let red = Math.floor((Math.random() * 256) + 1);
+  let green = Math.floor((Math.random() * 256) + 1);
+  let blue = Math.floor((Math.random() * 256) + 1);
+  return square.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  */
+}
