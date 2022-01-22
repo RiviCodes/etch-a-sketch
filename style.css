@@ -8,10 +8,11 @@ body {
   display: grid;
   height: 400px;
   width: 400px;
-  border: 2px solid black;
+  margin-top: 32px;
+  border: 6px solid black;
+  border-radius: 6px;
 }
 
 #grid > div {
-  border: solid 1px black;
   background: white;
 }
