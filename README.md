@@ -6,10 +6,8 @@ _This project's objective is to simulate the behaviour of an Etch-A-Sketch, usin
 
 _The 'CLEAR' button at the top of the screen has two purposes:_
 
-/*:
-1. Asks the user to input a number. A new grid will be created based on that criteria.
-2. The previous grid will be cleared and replaced with the new one.
-*/
+1. _Asks the user to input a number. A new grid will be created based on that criteria._
+2. _The previous grid will be cleared and replaced with the new one._
 
 _Due to possible perfomance issues if the number is too high, users can only input a grid size less-than and/or equal-to 100. Attemps to use a higher number will just stop the function from running._
 
